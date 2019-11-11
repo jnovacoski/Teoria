@@ -1,0 +1,85 @@
+\documentclass{article}
+\usepackage{xcolor}
+\usepackage{booktabs}
+\begin{document}
+    \begin{tabular}{p{6cm}p{6cm}}
+        \begin{tabular}{|c|c|c|}
+        \hline
+        Column 1 & Column 2 & Column 3 \\
+        \hline
+        second row & & \\
+        \hline
+        third row & & \\
+        \hline
+        \end{tabular}
+        &
+        \begin{tabular}{ccc}
+        Column 1 & Column 2 & Column 3 \\
+        \hline
+        second row & & \\
+        \hline
+        third row & & \\
+        \hline
+        \end{tabular}
+        \\[5em]
+        \begin{tabular}{|ccc|}
+        \hline
+        Column 1 & Column 2 & Column 3 \\
+        \hline
+        second row & & \\
+        third row & & \\
+        \hline
+        \end{tabular}
+        &
+        \begin{tabular}{|c|c|c|}
+        \hline
+        Column 1 & Column 2 & Column 3 \\
+        \hline
+        second row & & \\
+        third row & & \\
+        \hline
+        \end{tabular}
+        \\[5em]
+        \begin{tabular}{ccc}
+        Column 1 & Column 2 & Column 3 \\
+        second row & & \\
+        third row & & 
+        \end{tabular}
+        &
+        \begin{tabular}{lll}
+        \toprule
+        Column 1 & Column 2 & Column 3 \\
+        \midrule
+        second row & & \\
+        third row & & \\
+        \bottomrule
+        \end{tabular}
+        \\[5em]
+        % Colour for the rulings in tables:
+        \makeatletter
+           \def\rulecolor#1#{\CT@arc{#1}}
+           \def\CT@arc#1#2{%
+           \ifdim\baselineskip=\z@\noalign\fi
+           {\gdef\CT@arc@{\color#1{#2}}}}
+           \let\CT@arc@\relax
+          \rulecolor{gray!50}
+        \makeatother
+        \begin{tabular}{@{}lll@{}}
+        \toprule
+        Column 1 & Column 2 & Column 3 \\
+        \midrule
+        second row & & \\
+        third row & & \\
+        \bottomrule
+        \end{tabular}
+       &
+        \begin{tabular}{@{}lll@{}}
+        \toprule
+        Column 1 & Column 2 & Column 3 \\
+        \cmidrule(r){1-1}\cmidrule(lr){2-2}\cmidrule(l){3-3}
+        second row & & \\
+        third row & & \\
+        \bottomrule
+        \end{tabular}
+   \end{tabular}
+\end{document}

@@ -1,0 +1,7 @@
+1.Procurar outros exemplos de instâncias de PCPs que têm solução.
+2.Procurar exemplos de instâncias de PCPs que não têm solução e justificar.
+3.Encontre a solução (se existir) para cada um dos sistemas de correspondência de Post:
+a) A = (0, 10, 0); B = (10, 1, 01)
+b) A = (01, 001, 10}; B = (011, 01, 00)
+c) A = (01, 001, 10); B = (011, 10, 00)
+4. Apesar do PCP ser indecidível, é fácil alterar o problema para que se torne decidível. Penseem um algoritmo de decisão para o PCP num sistema de correspondência de Post composto por umalfabeto de um único símbolo

@@ -1,0 +1,78 @@
+\documentclass[12pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[brazilian]{babel}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage[T1]{fontenc}
+\usepackage{graphicx}
+\usepackage{physics}
+\usepackage{siunitx}
+\input{commands}
+
+\author{Aluno - Anderson Junior Novacoski}
+\title{Lista de Exercícios - Teoria da Computação}
+\date{}
+\begin{document}
+
+%%--CABEÇALHO--%%
+	\begin{center}
+    {\huge Lista de Exercícios \par}
+    {\LARGE Disciplina \par}
+    {\Large Teoria da Computação \par}
+	\end{center}
+
+\problem Procurar outros exemplos de instâncias de PCPs que têm solução.
+\answer{
+  \begin{table}[h]
+  \centering
+    \begin{tabular}{|r|r|r|r|r|r|}
+        \hline
+        \textbf{v1}&\textbf{v2}&\textbf{v3}&\textbf{v4}&\textbf{v5}&\textbf{v6}\\
+        \hline
+        01&00&001&10&100&11\\
+        \hline
+    \end{tabular}
+  \end{table}
+}
+\finalanswer{\text{Esta é a resposta final ao problema 1}}
+
+\problem Procurar exemplos de instâncias de PCPs que não têm solução e justificar.
+\answer Este é o desenvolvimento da resposta ao problema 1, incluindo os passos lógicos necessários e etc...
+\finalanswer{\text{Esta é a resposta final ao problema 2}}
+
+\problem Encontre a solução (se existir) para cada um dos sistemas de correspondência de Post:
+	\subproblem (0, 10, 0); B = (10, 1, 01)
+        \subanswer{
+                  \begin{table}[h]
+                  \centering
+                    \begin{tabular}{|l|l|l|}
+                        \hline
+                        \textbf{v1}&\textbf{v2}&\textbf{v3}\\
+                        \hline
+                        0&10&0\\
+                        \hline
+                        10&1&01\\
+                        \hline
+                    \end{tabular}
+                  \end{table}
+                  \\
+                  \textbf{Não é possível resolver.} Como só é possível começar com a sequência V2, ou V3(cuja parte de cima começa com os mesmos dígitos da parte de baixo)então não há como seguir adiante, afinal teríamos:\\
+                  v2->v3 = $\frac{100}{101}$\\
+                  v2->v1 = $\frac{100}{110}$\\
+                  v2->v2 = $\frac{1010}{11}$\\
+
+                  v3->v1 = $\frac{00}{0110}$\\
+                  v3->v2 = $\frac{010}{011}$\\
+                  v3->v3 = $\frac{00}{0101}$\\
+                  Gerando uma parada sem obter resposta.
+
+        }
+	\subproblem (01, 001, 10); B = (011, 01, 00)
+	\subanswer Subrespostas também são possíveis
+	\subproblem (01, 001, 10); B = (011, 10, 00)
+	\subanswer Subrespostas também são possíveis
+\problem Apesar do PCP ser indecidível, é fácil alterar o problema para que se torne decidível. Pense em um algoritmo de decisão para o PCP num sistema de correspondência de Post composto por um alfabeto de um único símbolo
+\answer Este é o desenvolvimento da resposta ao problema 1, incluindo os passos lógicos necessários e etc...
+\end{document}
+
